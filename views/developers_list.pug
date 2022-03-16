@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h2= title
+
+  ul(class="all-list")
+    each dev in developers_list
+      li
+        p
+          a(href=dev.url) #{dev.name} 
+          | ,founded in #{dev.foundation_year} 
+
+
+    else
+      li There are no developers.
+

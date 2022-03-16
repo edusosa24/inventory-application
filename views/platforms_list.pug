@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h2= title
+
+  ul(class="all-list")
+    each plat in platforms_list
+      li
+        p
+          a(href=plat.url) #{plat.name} 
+
+    else
+      li There are no platforms.
+

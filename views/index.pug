@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h2= title
+  
+  if error
+    p Error getting content.
+  else
+    p(class="home-intro") The library has the following record counts:
+
+    ul(class="home-list")
+      li #[strong Games:] !{data.game_count}
+      li #[strong Developers:] !{data.developer_count}
+      li #[strong Publishers:] !{data.publisher_count}
+      li #[strong Platforms:] !{data.platform_count}
+      li #[strong Genres:] !{data.genre_count}

@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  color: rgba(21, 43, 170, 0.973);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(15, 164, 209);
+}
+
+body {
+  position: relative;
+  margin-top: 6.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 3rem;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 6rem;
+  gap: 1.2rem;
+  padding: 1rem;
+  background-color: black;
+  z-index: 100;
+  top: 0;
+  position: fixed;
+}
+
+h1 {
+  color: white;
+}
+
+h2 {
+  margin: 1rem;
+  font-size: 1.6rem;
+}
+
+.header-nav {
+  padding: 0 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.main-nav {
+  list-style: none;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 2rem;
+}
+
+.main-nav > li > a {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+}
+
+.main-nav > li > a:hover {
+  color: goldenrod;
+}
+
+.home-list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.home-list > li {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.home-intro {
+  margin-bottom: 2rem;
+  text-align: center;
+  justify-self: center;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.game-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  list-style-type: none;
+}
+
+.game-list > li {
+  width: 80%;
+}
+
+.game-list-container {
+  display: flex;
+  height: 6rem;
+  width: 100%;
+  border: solid 1px black;
+  gap: 1rem;
+  border-radius: 0.4rem;
+  padding: 0.4rem 0;
+}
+
+.game-list-image {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-list-image > img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.game-list-info {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.game-list-info > p {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.game-list-info > p > a {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.all-list {
+  width: 80%;
+  list-style-type: square;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 0.5rem;
+}
+
+.all-list > li > p {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+
+.developer-info, .publisher-info{
+  text-align: left;
+  width: 80%;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: .5rem;
+}
+
+.list-title{
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+hr{
+  height: 1px;
+  width: 80%;
+  color: black;
+}
+
+.game-details-container{
+  margin: 2rem;
+  display: flex;
+  padding: 1rem;
+  max-height: fit-content;
+  width: 90%;
+  gap: 1.5rem;
+  border: 1px solid black;
+  border-radius: .6rem;
+}
+
+.game-image-container{
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 100%;
+  max-width: 35%;;
+}
+
+.game-image-container > img{
+  max-height: 70%;
+  max-width: 100%;
+}
+
+.game-full-info{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  max-width: 65%;
+  gap: 2rem;
+}
+
+.game-full-info > h2{
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.game-summary{
+  text-align: left;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.game-full-info > h3{
+  text-align: left;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.game-platforms, .game-genres{
+  display: flex;
+  justify-content: left;
+  gap: 1.6rem;
+  list-style-type: none;
+}
+
+.game-platforms > li > a, .game-genres > li > a{
+  font-size: 1.2rem;
+  font-weight: 400;
+}

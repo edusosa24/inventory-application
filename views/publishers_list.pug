@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h2= title
+
+  ul(class="all-list")
+    each pub in publishers_list
+      li
+        p
+          a(href=pub.url) #{pub.name} 
+          | ,founded in #{pub.foundation_year} 
+
+
+    else
+      li There are no publishers.
+

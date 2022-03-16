@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  div(class="game-details-container") 
+    div(class="game-image-container")
+      if(game.image_url != '')
+        img(src=game.image_url, alt=game.title)
+      else 
+        img(src="https://thumbs.dreamstime.com/b/no-image-available-icon-flat-vector-no-image-available-icon-flat-vector-illustration-132482953.jpg" alt="IMG NOT FOUND")
+
+    div(class="game-full-info")
+      h2= game.title 
+
+      p(class="game-summary") #{game.summary}
+
+      h3 Developer:
+        a(href=game.developer.url)  #{game.developer.name} 
+      h3 Publisher:
+        a(href=game.publisher.url)  #{game.publisher.name}
+
+      h3 Platforms:
+      ul(class="game-platforms") 
+        each platform in game.platform 
+          li 
+            a(href=platform.url) #{platform.name} 
+
+      h3 Genres:
+      ul(class="game-genres") 
+        each genre in game.genre 
+          li 
+            a(href=genre.url) #{genre.name} 
+

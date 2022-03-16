@@ -1,0 +1,26 @@
+doctype html
+html(lang='en')
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='stylesheet' href='/stylesheets/style.css' type='text/css')
+  body
+    header
+      h1 The Game Library
+      nav(class='header-nav') 
+        ul(class='main-nav')
+          li
+            a(href='/catalog') Home
+          li
+            a(href='/catalog/games') Games
+          li
+            a(href='/catalog/developers') Developers
+          li
+            a(href='/catalog/publishers') Publishers
+          li
+            a(href='/catalog/platforms') Platforms
+          li
+            a(href='/catalog/genres') Genres
+
+  block content

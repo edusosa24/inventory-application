@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h2= platform.name  
+       |  Games
+
+  ul(class="game-list")
+    each game in platform_games
+      li
+        div(class="game-list-container")
+          div(class="game-list-image") 
+            if(game.image_url != '')
+              img(src=game.image_url, alt=game.title)
+            else 
+              img(src="https://thumbs.dreamstime.com/b/no-image-available-icon-flat-vector-no-image-available-icon-flat-vector-illustration-132482953.jpg", alt=game.title)
+          div(class="game-list-info")  
+            p Title: 
+              a(href=game.url) #{game.title}
+            p Developer: 
+              a(href=game.developer.url) #{game.developer.name}
+            p Publisher: 
+              a(href=game.publisher.url) #{game.publisher.name}
+
+    else
+      li There are no games.

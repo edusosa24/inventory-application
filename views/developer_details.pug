@@ -8,6 +8,10 @@ block content
   p(class="developer-info") Origin country: #{developer.origin_country}
   hr
 
+  div.crud-functions
+    a(class="toForm" href=developer.url+'/delete') DELETE DEVELOPER
+    a(class="toForm" href=developer.url+'/update') UPDATE DEVELOPER
+
   h3(class="list-title") Games 
   ul(class="game-list")
     each game in developer_games

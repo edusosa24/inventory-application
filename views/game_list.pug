@@ -3,6 +3,9 @@ extends layout
 block content
   h2= title
 
+  div.crud-functions
+    a(class="toForm" href="/catalog/game/create") ADD GAME
+
   ul(class="game-list")
     each game in game_list
       li

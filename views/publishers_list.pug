@@ -3,6 +3,9 @@ extends layout
 block content
   h2= title
 
+  div.crud-functions
+    a(class="toForm" href="/catalog/publisher/create") ADD PUBLISHER
+
   ul(class="all-list")
     each pub in publishers_list
       li

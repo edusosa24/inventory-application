@@ -8,6 +8,12 @@ block content
   p(class="publisher-info") Origin country: #{publisher.origin_country}
   hr
 
+  div.crud-functions
+    a(class="toForm" href=publisher.url+'/delete') DELETE PUBLISHER
+    a(class="toForm" href=publisher.url+'/update') UPDATE PUBLISHER
+
+  hr
+
   h3(class="list-title") Games 
   ul(class="game-list")
     each game in publisher_games

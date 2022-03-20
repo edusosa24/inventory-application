@@ -1,6 +1,11 @@
 extends layout
 
 block content
+
+  div.crud-functions
+    a(class="toForm" href=game.url+'/delete') DELETE GAME
+    a(class="toForm" href=game.url+'/update') UPDATE GAME
+
   div(class="game-details-container") 
     div(class="game-image-container")
       if(game.image_url != '')
@@ -17,7 +22,8 @@ block content
         a(href=game.developer.url)  #{game.developer.name} 
       h3 Publisher:
         a(href=game.publisher.url)  #{game.publisher.name}
-
+      h3 Release date:
+        span(class="game-summary")  #{game.launch_date.toISOString().split('T')[0]}
       h3 Platforms:
       ul(class="game-platforms") 
         each platform in game.platform 

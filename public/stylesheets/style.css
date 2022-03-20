@@ -165,29 +165,29 @@ h2 {
   font-weight: 400;
 }
 
-
-.developer-info, .publisher-info{
+.developer-info,
+.publisher-info {
   text-align: left;
   width: 80%;
   font-size: 1.1rem;
   font-weight: 500;
-  margin: .5rem;
+  margin: 0.5rem;
 }
 
-.list-title{
+.list-title {
   text-align: center;
   font-size: 1.4rem;
   font-weight: 600;
   margin: 1rem 0;
 }
 
-hr{
+hr {
   height: 1px;
   width: 80%;
   color: black;
 }
 
-.game-details-container{
+.game-details-container {
   margin: 2rem;
   display: flex;
   padding: 1rem;
@@ -195,24 +195,24 @@ hr{
   width: 90%;
   gap: 1.5rem;
   border: 1px solid black;
-  border-radius: .6rem;
+  border-radius: 0.6rem;
 }
 
-.game-image-container{
+.game-image-container {
   padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   max-height: 100%;
-  max-width: 35%;;
+  max-width: 35%;
 }
 
-.game-image-container > img{
+.game-image-container > img {
   max-height: 70%;
   max-width: 100%;
 }
 
-.game-full-info{
+.game-full-info {
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -220,32 +220,244 @@ hr{
   gap: 2rem;
 }
 
-.game-full-info > h2{
+.game-full-info > h2 {
   text-align: center;
   font-size: 1.6rem;
   font-weight: 600;
 }
 
-.game-summary{
+.game-summary {
   text-align: left;
   font-size: 1.3rem;
   font-weight: 400;
 }
 
-.game-full-info > h3{
+.game-full-info > h3 {
   text-align: left;
   font-size: 1.4rem;
   font-weight: 500;
 }
 
-.game-platforms, .game-genres{
+.game-platforms,
+.game-genres {
   display: flex;
   justify-content: left;
   gap: 1.6rem;
   list-style-type: none;
 }
 
-.game-platforms > li > a, .game-genres > li > a{
+.game-platforms > li > a,
+.game-genres > li > a {
   font-size: 1.2rem;
   font-weight: 400;
+}
+
+form {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  justify-content: center;
+  align-items: left;
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  justify-content: center;
+  align-items: left;
+}
+
+label {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+input {
+  padding: 0 10px;
+  width: 100%;
+  height: 2rem;
+  border-radius: 0.3rem;
+  border: 1px black solid;
+}
+
+select {
+  padding: 0 10px;
+  width: 100%;
+  height: 2rem;
+  border-radius: 0.3rem;
+}
+
+textarea {
+  padding: 10px;
+  width: 100%;
+  height: 10rem;
+  border-radius: 0.3rem;
+  border: 1px black solid;
+  resize: none;
+  overflow-wrap: break-word;
+}
+
+.checkbox-list {
+  padding: 15px;
+  margin-top: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 1.2rem;
+  list-style-type: none;
+}
+
+.check-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.checkbox-input {
+  width: 15px;
+  height: 15px;
+}
+
+form > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 2.5rem;
+  background-color: black;
+  color: white;
+  border: 1px black solid;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+form > button:active {
+  color: black;
+  background-color: white;
+}
+
+.crud-functions {
+  width: 80%;
+  margin: 1.2rem 0;
+  display: flex;
+  gap: 0.8rem;
+  justify-content: left;
+  align-items: center;
+}
+
+.toForm {
+  width: fit-content;
+  padding: 8px;
+  text-align: left;
+  border: 1px black solid;
+  border-radius: 0.3rem;
+  font-weight: 500;
+}
+
+.delete-list {
+  list-style-type: none;
+  display: flex;
+  gap: 0.6rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+.delete-next {
+  margin: 1.4rem 0;
+}
+
+.delete-btn {
+  margin-top: 2rem;
+  align-self: center;
+  width: 8rem;
+}
+
+.delete-btn:hover {
+  color: black;
+  background-color: white;
+}
+
+@media screen and (max-width: 675px) {
+  body {
+    margin-top: 10rem;
+  }
+
+  header {
+    gap: 1rem;
+    height: 8rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .header-nav {
+    padding: 0 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-nav {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .main-nav > li > a {
+    font-size: 0.9rem;
+  }
+
+  .game-list-info > p {
+    font-size: 0.9rem;
+  }
+
+  .game-list-info > p > a {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .game-list > li {
+    width: 90%;
+  }
+
+  .game-list-info {
+    width: 80%;
+  }
+
+  .game-list-image {
+    width: 15%;
+  }
+
+  .game-list-info > p {
+    font-size: 0.8rem;
+  }
+
+  .game-list-info > p > a {
+    font-size: 0.8rem;
+  }
+
+  .game-details-container {
+    flex-direction: column;
+  }
+
+  .game-image-container {
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  .game-full-info {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    max-width: 100%;
+    gap: 2rem;
+  }
 }

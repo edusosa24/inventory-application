@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1= title
+
+  form(action='' method='POST')
+    div
+      label(for='name') Developer Name:
+      input#developer_name(type='text' placeholder='Larian studios, Santa Monica studios, etc.' name='name' required='true' value=(undefined===developer ? '' : developer.name) )
+    div   
+      label(for='foundation_year') Foundation Year:
+      input#developer_foundation_year(type='number' placeholder='Since: 1850' name='foundation_year' required='true' value=(undefined===developer ? '' : developer.foundation_year))
+    div
+      label(for='origin_country') Origin Country:
+      input#developer_origin_country(type='text' placeholder='Germany, Canada, etc.' name='origin_country' required='true' value=(undefined===developer ? '' : developer.origin_country) )
+    button(type='submit') Submit
+
+  if errors
+    ul
+      for error in errors
+        li!= error.msg

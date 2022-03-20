@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1= title
+
+  form(action='' method='POST')
+    div
+      label(for='name') Publisher Name:
+      input#publisher_name(type='text' placeholder='Devolver Digital, Valve, etc.' name='name' required='true' value=(undefined===publisher ? '' : publisher.name) )
+    div   
+      label(for='foundation_year') Foundation Year:
+      input#publisher_foundation_year(type='number' placeholder='Since: 1850' name='foundation_year' required='true' value=(undefined===publisher ? '' : publisher.foundation_year))
+    div
+      label(for='origin_country') Origin Country:
+      input#publisher_origin_country(type='text' placeholder='Germany, Canada, etc.' name='origin_country' required='true' value=(undefined===publisher ? '' : publisher.origin_country) )
+    button(type='submit') Submit
+
+  if errors
+    ul
+      for error in errors
+        li!= error.msg

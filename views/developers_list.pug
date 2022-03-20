@@ -3,6 +3,9 @@ extends layout
 block content
   h2= title
 
+  div.crud-functions
+    a(class="toForm" href="/catalog/developer/create") ADD DEVELOPER
+
   ul(class="all-list")
     each dev in developers_list
       li

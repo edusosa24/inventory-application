@@ -3,6 +3,9 @@ extends layout
 block content
   h2= title
 
+  div.crud-functions
+    a(class="toForm" href="/catalog/platform/create") ADD PLATFORM
+
   ul(class="all-list")
     each plat in platforms_list
       li

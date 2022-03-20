@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h2 #{title}: #{game.title}
+
+  p Do you really want to delete this Game?
+
+  form(action='' method='POST')
+    div
+      input#gameid(type='hidden' name='gameid' required='true', value=game._id )
+
+    button.delete-btn(type='submit') Delete
